@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background: linear-gradient(135deg, #2f80ed, #56ccf2);
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background: white;
+    color: #2563eb;
+}
+
+.links a, .links span {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #2563eb;
+}
+
+.signup {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.search {
+    margin-top: 30px;
+}
+
+.search input {
+    padding: 12px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+}
+
+.search button {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: none;
+    background: #2563eb;
+    color: white;
+}
+
+.result {
+    margin-top: 30px;
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.about {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    color: #111827;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.error {
+    color: #ffb4b4;
+}
+body.dark {
+    background: #020617;
+    color: #e5e7eb;
+}
