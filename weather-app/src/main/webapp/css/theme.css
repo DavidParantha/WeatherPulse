@@ -1,0 +1,194 @@
+:root {
+    --bg: #0b1020;
+    --card: #0f172a;
+    --muted: #94a3b8;
+    --primary: #38bdf8;
+    --accent: #22c55e;
+    --danger: #f87171;
+    --text: #e5e7eb;
+    --glass: rgba(255,255,255,0.06);
+    --border: rgba(148,163,184,0.15);
+    --shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background:
+            radial-gradient(1200px 600px at 10% -10%, #1f2a5a 0%, transparent 60%),
+            radial-gradient(800px 400px at 110% 10%, #0ea5e9 0%, transparent 55%),
+            linear-gradient(180deg, #020617, #020617);
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(180deg, rgba(2,6,23,.8), rgba(2,6,23,.6));
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 28px;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+
+.links a, .links span {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 16px;
+    opacity: .9;
+}
+
+.links a.active { color: var(--primary); }
+
+.signup {
+    margin-left: 12px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+    color: #020617;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+/* Hero */
+.hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 72px 20px 28px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: 8px;
+    letter-spacing: .3px;
+}
+
+.hero p {
+    color: var(--muted);
+    max-width: 720px;
+    margin: 0 auto 28px;
+}
+
+/* Search */
+.search {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.search input {
+    width: min(420px, 80vw);
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: var(--glass);
+    color: var(--text);
+    outline: none;
+}
+
+.search input::placeholder { color: var(--muted); }
+
+.search button {
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: linear-gradient(135deg, #22c55e, #86efac);
+    color: #052e16;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+/* Result Card */
+.result {
+    margin: 22px auto 0;
+    max-width: 720px;
+    background: linear-gradient(180deg, rgba(15,23,42,.9), rgba(2,6,23,.9));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px 18px 12px;
+    box-shadow: var(--shadow);
+}
+
+.result h2 {
+    margin: 0 0 6px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px,1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.stat {
+    background: rgba(255,255,255,.04);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 12px;
+    text-align: left;
+}
+
+.stat small { color: var(--muted); }
+
+/* Alerts */
+.alerts {
+    margin: 14px auto 0;
+    max-width: 720px;
+    border: 1px solid rgba(248,113,113,.35);
+    background: linear-gradient(180deg, rgba(248,113,113,.12), rgba(2,6,23,.9));
+    border-radius: 14px;
+    padding: 12px 14px;
+}
+
+.alerts h3 { margin: 0 0 6px; color: #fecaca; }
+.alerts li { color: #fee2e2; }
+
+/* About */
+.about {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 20px 72px;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(160px,1fr));
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(15,23,42,.9), rgba(2,6,23,.9));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: var(--shadow);
+}
+
+/* Messages */
+.error { color: var(--danger); margin-top: 8px; }
+.success { color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 720px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .links a { display: none; }
+}
