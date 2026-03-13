@@ -14,7 +14,7 @@ A starter medium-level Java web app using Servlets + JSP that fetches weather fr
 2. Configure Tomcat 10+ as Run Configuration
 3. Build with Maven
 4. Run on Tomcat
-5. Open http://localhost:8080/weather-app/
+5. http://localhost:8080/weather_app_war_exploded/index.jsp
 
 ## Next Steps
 - Add Login/Register
